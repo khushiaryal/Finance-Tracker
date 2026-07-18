@@ -22,6 +22,6 @@ function logout(){
     localStorage.removeItem("loggedIn");
     localStorage.removeItem("currentUser");
 
-    window.location.href = "dashboard.html";
+    window.location.href = "index.html";
 
 }
