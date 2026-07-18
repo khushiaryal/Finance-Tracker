@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Finance Tracker | Login</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#bdbbdd,#7C3AED,#b1d8df);
+
+    overflow:hidden;
+
+}
+
+/* Floating Background */
+
+.circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+}
+
+.c1{
+
+    width:220px;
+    height:220px;
+
+    top:60px;
+    left:80px;
+
+}
+
+.c2{
+
+    width:170px;
+    height:170px;
+
+    bottom:80px;
+    right:120px;
+
+}
+
+.c3{
+
+    width:120px;
+    height:120px;
+
+    top:120px;
+    right:300px;
+
+}
+
+/* Main Card */
+
+.container{
+
+    width:950px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:30px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+    z-index:10;
+
+}
+
+/* Left */
+
+.left{
+
+    padding:60px;
+
+    color:white;
+
+    background:rgba(255,255,255,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.left h1{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.left p{
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    margin-bottom:35px;
+
+}
+
+.left ul{
+
+    list-style:none;
+
+}
+
+.left ul li{
+
+    margin-bottom:18px;
+
+    font-size:15px;
+
+}
+
+/* Right */
+
+.right{
+
+    background:#f8fafc;
+
+    padding:50px;
+
+}
+
+.right h2{
+
+    text-align:center;
+
+    color:#1E293B;
+
+    margin-bottom:10px;
+
+}
+
+.right p{
+
+    text-align:center;
+
+    color:#64748B;
+
+    margin-bottom:35px;
+
+    font-size:14px;
+
+}
+
+.input-box{
+
+    margin-bottom:22px;
+
+}
+
+.input-box label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:500;
+
+    color:#334155;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    outline:none;
+
+    background:white;
+
+    font-size:15px;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.input-box input:focus{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(79,70,229,.2);
+
+}
+
+/* Button */
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#4F46E5;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#4338CA;
+
+    transform:translateY(-3px);
+
+}
+
+/* Signup Link */
+
+.signup{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#64748B;
+
+}
+
+.signup a{
+
+    text-decoration:none;
+
+    color:#4F46E5;
+
+    font-weight:600;
+
+}
+
+.signup a:hover{
+
+    text-decoration:underline;
+
+}
+
+@media(max-width:900px){
+
+.container{
+
+    grid-template-columns:1fr;
+
+    width:95%;
+
+}
+
+.left{
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.right{
+
+    padding:35px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+
+<div class="container">
+
+<div class="left">
+
+<h1>Welcome Back!</h1>
+
+<p>
+
+Login to continue managing your finances, track expenses, monitor savings, and stay on top of your financial goals.
+
+</p>
+
+<ul>
+
+<li>💰 Track Income & Expenses</li>
+
+<li>📊 View Reports</li>
+
+<li>💳 Manage Budget</li>
+
+<li>📈 Grow Your Savings</li>
+
+</ul>
+
+</div>
+
+<div class="right">
+
+<h2>Login</h2>
+
+<p>Access your Finance Tracker account</p>
+
+<form id="loginForm">
+
+<div class="input-box">
+
+<label>Email Address</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email">
+
+</div>
+
+<div class="input-box">
+
+<label>Password</label>
+
+<input
+type="password"
+id="password"
+placeholder="Enter your password">
+
+</div>
+
+<button type="submit">
+
+Login
+
+</button>
+
+<div class="signup">
+
+Don't have an account?
+
+<a href="signup.html">
+
+Create Account
+
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>
