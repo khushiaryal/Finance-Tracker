@@ -1,6 +1,6 @@
 // Check login status
 if(localStorage.getItem("loggedIn") !== "true"){
-    window.location.href = "index.html";
+    window.location.href = "dashboard.html";
 }
 
 // Show logged in user's name (optional)
