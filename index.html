@@ -288,11 +288,23 @@ button:hover{
     font-weight:600;
 
 }
-
 .signup a:hover{
 
     text-decoration:underline;
 
+}
+
+/* Password Eye Icon */
+.password-box{
+    position:relative;
+}
+
+.password-box span{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
 }
 
 @media(max-width:900px){
@@ -380,10 +392,16 @@ placeholder="Enter your email">
 
 <label>Password</label>
 
+<div class="password-box">
+
 <input
 type="password"
 id="password"
 placeholder="Enter your password">
+
+<span id="togglePassword">👁️</span>
+
+</div>
 
 </div>
 
